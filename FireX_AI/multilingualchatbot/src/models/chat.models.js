@@ -14,7 +14,7 @@ const ChatSchema = new mongoose.Schema({
   messages: [MessageSchema],
 });
 
-// Create a composite unique index on userId and chatId ad
+// Create a com index on userId and chatId ad
 ChatSchema.index({ userId: 1, chatId: 1 }, { unique: true });
 
 export default mongoose.models.Chat || mongoose.model("Chat", ChatSchema);
